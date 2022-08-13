@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="sign_up">sign up</string>
+    <string name="login">login</string>
+    <string name="welcometext">Hello %s</string>
+    <string name="error_empty">this field cant be empty</string>
+    <string name="name">Name</string>
+    <string name="welcometext2">i am very happy that you using my app</string>
+    <string name="navigate_instruction_screen">move to instrucion screen</string>
+    <string name="instructiontext1">you loged in with email %s</string>
+    <string name="instrciontext2">first this app work in storing shoes from shoe screen to veiw model</string>
+    <string name="instruciontext3">to add shoes to shoe screen please after got in home page click on button with + sign to navigate to other screen then add shoes</string>
+    <string name="home_screen">Home screen</string>
+    <string name="price">price</string>
+    <string name="size">size</string>
+    <string name="log_out">log out</string>
+    <string name="image_url">Image url</string>
+    <string name="company">Company</string>
+    <string name="shoes_description">Shoes description</string>
+    <string name="shoes_name">Shoes Name</string>
+    <string name="add_shoes">Add shoes</string>
+    <string name="cancel_opreation">cancel</string>
+</resources>

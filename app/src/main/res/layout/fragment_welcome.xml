@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".WelcomeFragment">
+<data>
+    <variable
+        name="name"
+        type="String" />
+</data>
+    <!-- TODO: Update blank fragment layout -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical">
+
+    <TextView
+        android:layout_marginVertical="@dimen/_4sdp"
+        android:text="@={name}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"/>
+
+    <TextView
+       android:layout_marginVertical="@dimen/_4sdp"
+        android:text="@string/welcometext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="italic"/>
+    <Button
+        android:id="@+id/instructiobutton"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:textSize="@dimen/_11sdp"
+        android:background="@drawable/buttonshape"
+        android:backgroundTint="@color/colorpink"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/navigate_instruction_screen"
+        android:textColor="@color/white"
+        tools:ignore="TextContrastCheck" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+    </FrameLayout>
+
+</layout>

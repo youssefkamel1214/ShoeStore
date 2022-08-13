@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InsutrctionFragment">
+<data>
+    <variable
+        name="emailtextstring"
+        type="String" />
+</data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_7sdp">
+
+        <TextView
+            android:id="@+id/emailtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={emailtextstring}"
+            android:textAlignment="center"
+            android:textColor="@color/colorpink"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/instructiontext1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <TextView
+            android:id="@+id/instructiontext1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instrciontext2"
+            android:textAlignment="center"
+            android:textColor="@color/colorpink"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/instructiontext2"
+            app:layout_constraintTop_toBottomOf="@+id/emailtext"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <TextView
+            android:id="@+id/instructiontext2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instruciontext3"
+            android:textAlignment="center"
+            android:textColor="@color/colorpink"
+            android:textSize="@dimen/_17sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/navigatetohomefragment"
+            app:layout_constraintTop_toBottomOf="@+id/instructiontext1"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <Button
+            android:padding="@dimen/_7sdp"
+            android:id="@+id/navigatetohomefragment"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/buttonshape"
+            android:backgroundTint="@color/colorpink"
+            android:minWidth="100dp"
+            android:text="@string/home_screen"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintTop_toBottomOf="@+id/instructiontext2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
