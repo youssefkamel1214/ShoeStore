@@ -7,23 +7,24 @@
             name="shoes"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
+    <!--this constraint layout used to align views realtive to each other and using chains horzintally-->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_200sdp">
+    android:layout_height="230dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardimage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/shoesimage"
-            android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_100sdp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:scaleType="fitXY"
             android:src="@drawable/shoes_logo" />
     </androidx.cardview.widget.CardView>
@@ -32,10 +33,10 @@
         android:id="@+id/shoesname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_5sdp"
+        android:layout_margin="8dp"
         android:text="@={shoes.name}"
         android:textAlignment="center"
-        android:textSize="@dimen/_21sdp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/cardimage"
@@ -45,10 +46,10 @@
         android:id="@+id/shoesdescrption"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_5sdp"
+        android:layout_margin="8dp"
         android:text="@={shoes.description}"
         android:textAlignment="textStart"
-        android:textSize="@dimen/_18sdp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/cardimage"
         app:layout_constraintTop_toBottomOf="@id/shoesname" />
@@ -57,9 +58,9 @@
         android:id="@+id/shoescompany"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_5sdp"
+        android:layout_margin="8dp"
         android:text="@={shoes.company}"
-        android:textSize="@dimen/_17sdp"
+        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/cardimage"
         app:layout_constraintTop_toBottomOf="@id/shoesdescrption" />
@@ -69,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/size"
-        android:textSize="@dimen/_20sdp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/pricelabel"
         app:layout_constraintHorizontal_bias="0.5"
@@ -81,7 +82,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/price"
-        android:textSize="@dimen/_20sdp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -91,8 +92,9 @@
         android:id="@+id/sizetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_20sdp"
+        android:textSize="22sp"
         android:textStyle="bold"
+        android:text="@{@string/size_indecimal(shoes.size)}"
         app:layout_constraintEnd_toStartOf="@+id/pricelabel"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,8 +104,9 @@
         android:id="@+id/pricetext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_20sdp"
+        android:textSize="22sp"
         android:textStyle="bold"
+        android:text="@{@string/price_indecimail(shoes.price)}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/sizelabel"

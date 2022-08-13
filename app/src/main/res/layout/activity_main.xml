@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     tools:context=".MainActivity">
-<androidx.constraintlayout.widget.ConstraintLayout
+    <!-- this constraint  layout to adujust app bar and put fragment layout below constraint layout-->
+    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
@@ -23,23 +24,14 @@
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </com.google.android.material.appbar.AppBarLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:orientation="vertical"
-    android:weightSum="1"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/appbar">
-
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         app:defaultNavHost="true"
-        android:layout_weight="1"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
         app:navGraph="@navigation/nav"/>
-</LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

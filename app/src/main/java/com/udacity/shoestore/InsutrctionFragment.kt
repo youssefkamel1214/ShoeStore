@@ -20,7 +20,7 @@ class InsutrctionFragment : Fragment() {
         // Inflate the layout for this fragment
         biding= FragmentInsutrctionBinding.inflate(layoutInflater,container,false)
         val instuctionargs by navArgs<InsutrctionFragmentArgs>()
-        biding.emailtextstring=getString(R.string.instructiontext1,instuctionargs.email)
+        biding.emailtextstring=instuctionargs.email
         biding.navigatetohomefragment.setOnClickListener{
             val action=InsutrctionFragmentDirections.actionInsutrctionFragmentToHomeFragment()
             findNavController().navigate(action)

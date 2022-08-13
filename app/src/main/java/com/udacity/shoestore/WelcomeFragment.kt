@@ -21,11 +21,12 @@ class WelcomeFragment : Fragment() {
         // Inflate the layout for this fragment
         biding= FragmentWelcomeBinding.inflate(layoutInflater,container,false)
         val welcomeargs by navArgs<WelcomeFragmentArgs>()
-        biding.name=getString(R.string.welcometext,welcomeargs.name)
-        biding.instructiobutton.setOnClickListener(View.OnClickListener {
-            val action=WelcomeFragmentDirections.actionWelcomeFragmentToInsutrctionFragment(welcomeargs.email)
+        biding.name=welcomeargs.name
+        biding.instructiobutton.setOnClickListener {
+            val action =
+                WelcomeFragmentDirections.actionWelcomeFragmentToInsutrctionFragment(welcomeargs.email)
             findNavController().navigate(action)
-        })
+        }
         return biding.root
     }
 

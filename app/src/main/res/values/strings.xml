@@ -24,4 +24,6 @@
     <string name="shoes_name">Shoes Name</string>
     <string name="add_shoes">Add shoes</string>
     <string name="cancel_opreation">cancel</string>
+    <string name="price_indecimail">%.2f$</string>
+    <string name="size_indecimal">%.1f</string>
 </resources>

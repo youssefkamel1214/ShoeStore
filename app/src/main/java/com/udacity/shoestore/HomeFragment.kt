@@ -45,8 +45,6 @@ class HomeFragment : Fragment() {
         for (shoe:Shoe in shoes){
             val shoebiding:ShoeslayoutBinding= ShoeslayoutBinding.inflate(layoutInflater)
             shoebiding.shoes=shoe
-            shoebiding.pricetext.text= String.format("%.2f",shoe.price)
-            shoebiding.sizetext.text= String.format("%.2f",shoe.size)
             Glide.with(requireContext()).load(shoe.imageurl).placeholder(R.drawable.shoes_logo).into(shoebiding.shoesimage)
             biding.linearlayout.addView(shoebiding.root)
         }

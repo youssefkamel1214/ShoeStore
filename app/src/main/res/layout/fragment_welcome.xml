@@ -8,10 +8,10 @@
         name="name"
         type="String" />
 </data>
-    <!-- TODO: Update blank fragment layout -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+    <!-- this linear layout to put text view under each other make them in middle of screen -->
 <androidx.appcompat.widget.LinearLayoutCompat
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
 
     <TextView
         android:layout_marginVertical="@dimen/_4sdp"
-        android:text="@={name}"
+        android:text="@{@string/welcometext(name)}"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
