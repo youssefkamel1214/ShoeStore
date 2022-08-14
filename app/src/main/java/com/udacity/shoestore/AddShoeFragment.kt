@@ -15,6 +15,7 @@ import com.udacity.shoestore.viewmodel.ShoeVeiwmodel
 class AddShoeFragment : Fragment() {
     lateinit var biding:FragmentAddShoeBinding
     lateinit var viewmodel:ShoeVeiwmodel
+      var shoee:Shoe=Shoe("",0.0,0.0,"","","")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,10 +27,10 @@ class AddShoeFragment : Fragment() {
         biding.cancelButton.setOnClickListener{
             findNavController().navigateUp()
         }
+        biding.shoe=shoee
         biding.addbutton.setOnClickListener{
-          val shoe: Shoe? =getinputs()
-          if(shoe!=null){
-              viewmodel.add_shoes(shoe)
+          if(checkinputs()){
+              viewmodel.add_shoes(shoee)
               findNavController().navigateUp()
 
           }
@@ -37,42 +38,33 @@ class AddShoeFragment : Fragment() {
         return biding.root
     }
 
-    private fun getinputs(): Shoe? {
-        var good:Boolean=true
-        if (biding.shoesname.text.isEmpty()) {
+    private fun checkinputs(): Boolean {
+        var good=true
+        if (shoee.name.isEmpty()) {
            good = false
-           biding.shoesname.setError(getString(R.string.error_empty))
+            biding.shoesname.error = getString(R.string.error_empty)
         }
-        if(biding.shoedescrtiption.text.isEmpty()) {
+        if(shoee.description.isEmpty()) {
            good = false
-           biding.shoedescrtiption.setError(getString(R.string.error_empty))
+            biding.shoedescrtiption.error = getString(R.string.error_empty)
         }
-        if(biding.company.text.isEmpty()){
+        if(shoee.company.isEmpty()){
             good=false
-            biding.company.setError(getString(R.string.error_empty))
+            biding.company.error = getString(R.string.error_empty)
         }
-        if(biding.size.text.isEmpty()){
+        if(shoee.price==0.0){
             good=false
-            biding.size.setError(getString(R.string.error_empty))
+            biding.size.error = getString(R.string.value_error)
         }
-        if(biding.price.text.isEmpty()){
+        if(shoee.size==0.0){
             good=false
-            biding.price.setError(getString(R.string.error_empty))
+            biding.size.error = getString(R.string.value_error)
         }
         if(biding.imageurl.text.isEmpty()){
             good=false
-            biding.imageurl.setError(getString(R.string.error_empty))
+            biding.imageurl.error = getString(R.string.error_empty)
         }
-        if(!good){
-            return null
-        }
-        else{
-            val sizestr = biding.size.text.toString()
-            val pricestr = biding.price.text.toString()
-            val shoe:Shoe=Shoe(biding.shoesname.text.toString(),sizestr.trim().toDouble(),pricestr.trim().toDouble(),
-                biding.company.text.toString(),biding.shoedescrtiption.text.toString(),biding.imageurl.text.trim().toString())
-            return shoe
-        }
+       return good
     }
 
 }

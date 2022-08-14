@@ -26,4 +26,5 @@
     <string name="cancel_opreation">cancel</string>
     <string name="price_indecimail">%.2f$</string>
     <string name="size_indecimal">%.1f</string>
+    <string name="value_error">this value cant be 0.0</string>
 </resources>

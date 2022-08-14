@@ -2,8 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     tools:context=".AddShoeFragment">
+    <data>
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
 <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -38,6 +42,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/rounded_edit_text"
                 android:importantForAutofill="no"
+                android:text="@={shoe.name}"
                 android:inputType="text"
                 android:textSize="20sp"
                 tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -58,6 +63,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/rounded_edit_text"
                 android:importantForAutofill="no"
+                android:text="@={shoe.description}"
                 android:inputType="text"
                 android:textSize="20sp"
                 tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -74,6 +80,7 @@
                 android:padding="8dp"
                 android:id="@+id/company"
                 android:layout_width="match_parent"
+                android:text="@={shoe.company}"
                 android:layout_height="40dp"
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/rounded_edit_text"
@@ -99,6 +106,7 @@
                 android:background="@drawable/rounded_edit_text"
                 android:importantForAutofill="no"
                 android:inputType="numberDecimal"
+                android:text="@={``+shoe.size}"
                 android:textSize="20sp"
                 tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
             <TextView
@@ -118,6 +126,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/rounded_edit_text"
                 android:importantForAutofill="no"
+                android:text="@={``+shoe.price}"
                 android:inputType="numberDecimal"
                 android:textSize="20sp"
                 tools:ignore="DuplicateSpeakableTextCheck,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
@@ -135,6 +144,7 @@
                 android:id="@+id/imageurl"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:text="@={shoe.imageurl}"
                 android:layout_marginHorizontal="10dp"
                 android:background="@drawable/rounded_edit_text"
                 android:importantForAutofill="no"
